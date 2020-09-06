@@ -1,0 +1,106 @@
+// GEMS
+// Hide chipped and flawed
+//ItemDisplay[GEMLEVEL<3]:
+
+// Hide normal (not amethyst or skull)
+//ItemDisplay[GEMLEVEL=3 AND !(GEMTYPE=1 OR GEMTYPE=7)]:
+
+// Only hide chipped
+ItemDisplay[GEMLEVEL=1]:
+
+// Make flawed purple
+ItemDisplay[GEMLEVEL=2]: %PURPLE%%NAME%
+
+// Make normal purple
+ItemDisplay[GEMLEVEL=3]: %PURPLE%%NAME%
+
+// Make flawless purple
+ItemDisplay[GEMLEVEL=4]: %PURPLE%%NAME%
+
+// Make perfect purple
+ItemDisplay[GEMLEVEL=5]: %PURPLE%%NAME%
+
+
+//Ignore 'junk' (Miscellaneous potions, quivers, etc.), potion, scroll renaming & gold piles below 2000.
+ItemDisplay[GOLD<2000]:
+ItemDisplay[tsc]: Scroll of Town Portal
+ItemDisplay[isc]: Scroll of Identify
+ItemDisplay[vps]:
+ItemDisplay[yps]:
+ItemDisplay[wms]:
+ItemDisplay[gps]:
+ItemDisplay[ops]:
+ItemDisplay[gpm]:
+ItemDisplay[opm]:
+ItemDisplay[gpl]:
+ItemDisplay[opl]:
+ItemDisplay[hp1]: 
+ItemDisplay[hp2]: 
+ItemDisplay[hp3]: 
+ItemDisplay[hp4]: Greater Healing Potion
+ItemDisplay[hp5]: Super Healing Potion
+ItemDisplay[mp1]: 
+ItemDisplay[mp2]: 
+ItemDisplay[mp3]: 
+ItemDisplay[mp4]: Greater Mana Potion
+ItemDisplay[mp5]: Super Mana Potion
+ItemDisplay[rvs]: %PURPLE% Rejuvenation Potion
+ItemDisplay[rvl]: %PURPLE% Full Rejuvenation Potion
+ItemDisplay[aqv]:
+ItemDisplay[cqv]:
+ItemDisplay[key]:
+ItemDisplay[ear]:
+
+
+// Jewels, Small/Grand Charms
+ItemDisplay[MAG (jew OR cm1 OR cm3)]: %ORANGE%%NAME%
+
+//Druid Pelts
+ItemDisplay[MAG !ETH !ID CL1]: %PURPLE%O%BLUE%%NAME%
+
+//Monarchs
+ItemDisplay[MAG !ETH !ID uit]: %PURPLE%O%BLUE%%NAME%
+
+//Circlets/Diadems/Etc
+ItemDisplay[MAG !ETH !ID EQ7]: %PURPLE%O%BLUE%%NAME%
+
+//Archon Plate
+ItemDisplay[MAG !ETH !ID utp]: %PURPLE%O%BLUE%%NAME%
+
+//Dusk Shroud
+ItemDisplay[MAG !ETH !ID uui]: %PURPLE%O%BLUE%%NAME%
+
+//4+ socket polearms
+ItemDisplay[WP8 ETH ELT NMAG (SOCK=0 OR SOCK>3) !7o7]: %PURPLE%O%GRAY%%NAME%
+
+// Body armor
+ItemDisplay[EQ2 ELT ETH NMAG !SUP (SOCK=0 or SOCK>3)]: %PURPLE%O%GRAY%%NAME%
+ItemDisplay[uui !ETH NMAG !SOCK=1 !SOCK=2 DEF>450]: %PURPLE%O%WHITE%%NAME%
+ItemDisplay[utp !ETH NMAG !SOCK=1 !SOCK=2 DEF>499]: %PURPLE%O%WHITE%%NAME%
+ItemDisplay[xtp !ETH NMAG !SOCK=1 !SOCK=2 DEF>254]: %PURPLE%O%WHITE%%NAME%
+ItemDisplay[xtp !ETH NMAG ED>13]: %PURPLE%O%WHITE%%NAME%
+
+// Paladin shields
+ItemDisplay[CL3 ELT !ETH NMAG RES>39 !SOCK=1 !SOCK=2]: %PURPLE%O%WHITE%%NAME%
+
+// Paladin shields
+ItemDisplay[CL3 ELT ETH NMAG RES>39 (SOCK=0 or SOCK=4]: %PURPLE%O%GRAY%%NAME%
+
+// Grand matron bows
+ItemDisplay[amc ((SOCK=0 !SUP) OR SOCK=4) NMAG CLSK0=3]: %PURPLE%O%WHITE%%NAME%
+
+//Grief base
+ItemDisplay[7cr NMAG !ETH (SOCK=0 OR SOCK=5)]: %PURPLE%O%WHITE%%NAME%
+
+//Assassin Claws
+//ItemDisplay[MAG !ID (9lw OR 7lw OR 9tw OR 7tw OR 9hw OR 7hw)]: %PURPLE%O%BLUE%%NAME%
+
+//Add Rune Number
+ItemDisplay[RUNE>0]: %RUNENAME% - %RUNENUM%
+
+// Add ethereality, sockets, ilvl to the name
+ItemDisplay[ETH]: Eth %NAME%%CONTINUE%
+ItemDisplay[SOCK>0]: %NAME% (%SOCKETS%)%CONTINUE%
+
+// Hiding inferior items
+ItemDisplay[INF !leg]:
